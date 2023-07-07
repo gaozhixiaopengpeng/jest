@@ -77,3 +77,33 @@ modulex.exports = {
   }
 }
 ```
+
+# 测试
+localStorage封装成storage函数，测试storage函数
+
+### 编写代码
+```
+src/utils/storage.ts
+test/utils/storage.test
+```
+
+### 运行
+
+由于 Node.js 环境并没有 localStorage，所以你会得到这样的报错：
+
+> localStorage is not defined
+
+### 全局 Mock
+```
+tests/jest-setup.ts
+```
+
+### setupFilesAfterEnv
+然后在 jest.config.js 里更新 setupFilesAfterEnv 配置：
+
+```
+// jest.config.js 
+module.exports = {
+  setupFilesAfterEnv: ['./tests/jest-setup.ts'],
+};
+```
