@@ -107,3 +107,23 @@ module.exports = {
   setupFilesAfterEnv: ['./tests/jest-setup.ts'],
 };
 ```
+
+### jsdom
+我们不可能把浏览器里所有的 API 都 Mock 一遍，而且不可能做到 100% 还原所有功能
+
+因此这不是一个解决方案
+
+别急，jest 提供了 testEnvironment 配置
+
+```
+// jest.config.js
+module.exports = {
+  testEnvironment: "jsdom",
+}
+```
+
+删除jest-setup.ts文件后
+
+安装jest-environment-jsdom
+
+> npm i jest-environment-jsdom
