@@ -137,3 +137,14 @@ module.exports = {
 
 ### jest-environment-jsdom-global
 在tests/jest-setup.ts 里全局引入一下
+
+# 需求
+通过需求去写测试用例
+
+需求: 把给定对象转换成查询参数字符串
+
+### 先写测试用例
+```
+1. test/utils/objToSearchStr.test.ts
+2. 在src/utils/objToSearchStr.ts中去实现
+```
