@@ -127,3 +127,13 @@ module.exports = {
 安装jest-environment-jsdom
 
 > npm i jest-environment-jsdom
+
+# 测试网页地址
+第一种方法使用 jest-environment-jsdom-global (opens new window)。 这种方法会在 global 全局对象挂一个 jsdom， 通过 jsdom 的 reconfigure API 来修改 JSDOM 环境的 url。
+
+第二种方法使用 jest-location-mock (opens new window)。 这种方法会监听 window.location.assign，通过它来改变网页地址。
+
+> 推荐使用第二种
+
+### jest-environment-jsdom-global
+在tests/jest-setup.ts 里全局引入一下

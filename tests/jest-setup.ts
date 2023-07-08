@@ -1,18 +1,3 @@
-// Object.defineProperty(global, "localStorage", {
-//   value: {
-//     store: {} as Record<string, string>,
-//     getItem(key: string) {
-//       return this.store[key];
-//     },
-//     setItem(key: string, value: string) {
-//       this.store[key] = value;
-//     },
-//     removeItem(key: string) {
-//       delete this.store[key];
-//     },
-//     clear() {
-//       this.store = {};
-//     },
-//   },
-//   configurable: true
-// });
+// jest-setup.ts
+// 使用 Jest 的 Spy 和扩展 expect 来 Mock `window.location`
+import "jest-location-mock";
