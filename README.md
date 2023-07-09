@@ -148,3 +148,11 @@ module.exports = {
 1. test/utils/objToSearchStr.test.ts
 2. 在src/utils/objToSearchStr.ts中去实现
 ```
+
+# 定时器（Timer）的 Mock
+```
+src/utils/delayExecFunc.ts
+test/utils/delayExecFunc.ts
+
+在这次的测试中，我们用 jest.fn 生成了一个监听函数（假函数），然后马上断言这个函数是没有被调用过的。然后， 在调用 after1000ms 之后，用 jest.runAllTimers 快进时间，最后来判断 callback 是否只被调用了 1 次。
+```
