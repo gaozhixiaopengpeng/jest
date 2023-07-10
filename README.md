@@ -156,3 +156,14 @@ test/utils/delayExecFunc.ts
 
 在这次的测试中，我们用 jest.fn 生成了一个监听函数（假函数），然后马上断言这个函数是没有被调用过的。然后， 在调用 after1000ms 之后，用 jest.runAllTimers 快进时间，最后来判断 callback 是否只被调用了 1 次。
 ```
+
+# sleep函数
+需求：让程序睡上个几秒再继续执行
+
+```
+console.log('开始'); // 准备
+
+await sleep(1000); // 睡 1 秒
+
+console.log('结束'); // 睡醒
+```
