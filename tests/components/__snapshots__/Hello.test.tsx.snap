@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hello 渲染大字体 1`] = `
+<div>
+  Hello React
+</div>
+`;
+
+exports[`Hello 渲染小字体 1`] = `
+<div>
+  Hello Jest
+</div>
+`;
